@@ -7,116 +7,76 @@
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  text-align: center;
+    margin: 0;
+    font-family: Arial;
+    background: #000;
+    color: white;
+    text-align: center;
 }
 
-/* الخلفية */
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
+header {
+    padding: 20px;
+    background: linear-gradient(90deg, #111, #222);
+    font-size: 20px;
+    color: #ff3c00;
 }
 
-/* صورتين */
-.left, .right {
-  width: 50%;
-  background-size: cover;
-  background-position: center;
+.section {
+    display: none;
+    padding: 30px;
+    animation: fadeIn 0.5s ease;
 }
 
-.left {
-  background-image: url('https://images.unsplash.com/photo-1594737625785-cdd7b2f7c59d?q=80&w=1200');
+.active {
+    display: block;
 }
 
-.right {
-  background-image: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200');
-}
-
-/* طبقة دخان */
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.9) 100%);
-}
-
-/* المحتوى */
-.content {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* اللوجو */
-.logo {
-  font-size: 60px;
-  font-weight: bold;
-  color: #ff3c1f;
-  margin-bottom: 20px;
-}
-
-/* النص */
-.subtitle {
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-/* الأزرار */
 .btn {
-  display: block;
-  margin: 15px auto;
-  padding: 16px;
-  width: 80%;
-  max-width: 320px;
-  border-radius: 40px;
-  background: #ff3c1f;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
+    display: block;
+    background: #ff3c00;
+    color: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .btn:hover {
-  opacity: 0.8;
-}
-
-/* الصفحات */
-.section {
-  display: none;
-  padding: 30px 15px;
+    background: #ff5722;
 }
 
 .card {
-  border: 1px solid #ff3c1f;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px;
+    border: 2px solid #ff3c00;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: right;
 }
 
 .whatsapp {
-  background: #25D366;
+    background: #25D366;
 }
 
 .back {
-  background: #333;
+    margin-top: 20px;
+    display: inline-block;
+    color: #ff3c00;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>
 
 <script>
-function showPage(id) {
-  document.getElementById("home").style.display = "none";
-  document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
-  document.getElementById(id).style.display = "block";
-}
-
-function goHome() {
-  document.getElementById("home").style.display = "block";
-  document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+function showSection(id){
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
 }
 </script>
 
@@ -124,62 +84,107 @@ function goHome() {
 
 <body>
 
+<header>🔥 TAREK POWERLIFTING 🔥</header>
+
 <!-- الصفحة الرئيسية -->
-<div id="home">
-  <div class="hero">
-    
-    <div class="left"></div>
-    <div class="right"></div>
+<div id="home" class="section active">
+    <h2>اختر الباقة المناسبة لك</h2>
 
-    <div class="overlay"></div>
-
-    <div class="content">
-      <div class="logo">T</div>
-
-      <p class="subtitle">لشرح اكثر عن الباقه ومحتواها يرجى الضغط عليها</p>
-
-      <a class="btn" onclick="showPage('power')">
+    <div class="btn" onclick="showSection('power')">
         Powerlifting - زيادة القوة
-      </a>
-
-      <a class="btn" onclick="showPage('body')">
-        BodyBuilding - تحسين شكل الجسم
-      </a>
     </div>
 
-  </div>
+    <div class="btn" onclick="showSection('body')">
+        BodyBuilding - تحسين شكل الجسم
+    </div>
+
+    <div class="btn" onclick="showSection('faq')">
+        الأسئلة الشائعة
+    </div>
 </div>
 
-<!-- باور -->
+<!-- باورلفتينج -->
 <div id="power" class="section">
-  <h2>🔥 باقة القوة 🔥</h2>
+    <h2>باقة الباورلفتينج</h2>
 
-  <div class="card">
-    <p>💪 زيادة القوة في السكوات والبنش والديدلفت</p>
-    <p>✔ جدول مخصص</p>
-    <p>✔ حساب السعرات</p>
-    <p>✔ متابعة يومية</p>
-    <p>💰 السعر: 299 ريال</p>
-  </div>
+    <div class="card">
+        💪 زيادة القوة ورفع الأوزان<br><br>
+        ✔ جدول مخصص<br>
+        ✔ حساب السعرات<br>
+        ✔ متابعة يومية<br>
+        ✔ تعديل التكنيك بالفيديو<br><br>
+        💰 السعر: 299 ريال
+    </div>
 
-  <a class="btn whatsapp" href="https://wa.me/966563035411">واتساب</a>
-  <a class="btn back" onclick="goHome()">رجوع</a>
+    <a class="btn whatsapp" href="https://wa.me/966563035411">
+        تواصل واتساب
+    </a>
+
+    <div class="back" onclick="showSection('home')">رجوع</div>
 </div>
 
-<!-- بودي -->
+<!-- بادي بيلدنج -->
 <div id="body" class="section">
-  <h2>🔥 باقة الكتلة 🔥</h2>
+    <h2>باقة البودي بيلدنج</h2>
 
-  <div class="card">
-    <p>🔥 بناء عضلي + خسارة دهون</p>
-    <p>✔ نظام غذائي</p>
-    <p>✔ جدول تدريب</p>
-    <p>✔ متابعة مستمرة</p>
-    <p>💰 السعر: 299 ريال</p>
-  </div>
+    <div class="card">
+        🔥 بناء عضلي + خسارة دهون<br><br>
+        ✔ جدول تدريب<br>
+        ✔ نظام غذائي<br>
+        ✔ متابعة يومية<br>
+        ✔ تحسين الأداء<br><br>
+        💰 السعر: 299 ريال
+    </div>
 
-  <a class="btn whatsapp" href="https://wa.me/966563035411">واتساب</a>
-  <a class="btn back" onclick="goHome()">رجوع</a>
+    <a class="btn whatsapp" href="https://wa.me/966563035411">
+        تواصل واتساب
+    </a>
+
+    <div class="back" onclick="showSection('home')">رجوع</div>
+</div>
+
+<!-- FAQ -->
+<div id="faq" class="section">
+    <h2>📌 الأسئلة الشائعة</h2>
+
+    <div class="card">
+
+    <p><strong>آلية التواصل؟</strong><br>
+    عن طريق الواتس آب</p>
+
+    <p><strong>وقت تصميم الجدول؟</strong><br>
+    ٤-٦ أيام بعد الفورم</p>
+
+    <p><strong>هل تدرب بنات؟</strong><br>
+    نعم، بدون تصوير</p>
+
+    <p><strong>تمرين في البيت؟</strong><br>
+    تقدر توصل لهدفك</p>
+
+    <p><strong>الأدوات المطلوبة؟</strong><br>
+    ميزان + ميزان أكل + شريط قياس</p>
+
+    <p><strong>مكالمة قبل الاشتراك؟</strong><br>
+    لا، التواصل واتساب فقط</p>
+
+    <p><strong>تسجيل يومي؟</strong><br>
+    10 دقائق أسبوعيًا</p>
+
+    <p><strong>الأكل لازم ثابت؟</strong><br>
+    لا، أي أكل ضمن السعرات</p>
+
+    <p><strong>الدفع خارج السعودية؟</strong><br>
+    تحويل أو ماي فاتورة</p>
+
+    <p><strong>تضمن النتائج؟</strong><br>
+    حسب التزامك</p>
+
+    <p><strong>الصور ضرورية؟</strong><br>
+    لا</p>
+
+    </div>
+
+    <div class="back" onclick="showSection('home')">رجوع</div>
 </div>
 
 </body>
