@@ -1,62 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarek Powerlifting</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #000;
+    color: white;
+}
+
+.page {
+    display: none;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1550345332-09e3ac987658') center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+}
+
+.center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.btn {
+    display:block;
+    background:#ff3c1f;
+    padding:15px;
+    margin:15px auto;
+    width:300px;
+    border-radius:30px;
+    cursor:pointer;
+    color:white;
+    text-decoration:none;
+}
+
+.box {
+    border:2px solid #ff3c1f;
+    border-radius:20px;
+    padding:20px;
+    text-align:right;
+    line-height:1.9;
+}
+
+.price {
+    margin-top:20px;
+    font-size:22px;
+    color:#ff3c1f;
+    font-weight:bold;
+}
+
+.back {
+    margin-top:20px;
+    background:#ff3c1f;
+    padding:10px 20px;
+    border-radius:20px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+}
+
+.faq-item {
+    margin:15px 0;
+    text-align:right;
+}
+
+.faq-question {
+    background:#ff3c1f;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.faq-answer {
+    display:none;
+    padding:12px;
+    line-height:1.8;
+}
+</style>
+
+<script>
+function openPage(id){
+    document.querySelectorAll('.page').forEach(p=>p.style.display="none");
+    document.getElementById(id).style.display="block";
+}
+
+function toggleFAQ(el){
+    let ans = el.nextElementSibling;
+    ans.style.display = (ans.style.display==="block")?"none":"block";
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- الرئيسية -->
+<div id="home" class="page hero" style="display:block;">
+<div class="overlay"></div>
+
+<div class="center">
+<h2>🔥 TAREK POWERLIFTING 🔥</h2>
+
+<div class="btn" onclick="openPage('power')">
+Powerlifting - زيادة القوة
+</div>
+
+<div class="btn" onclick="openPage('body')">
+Bodybuilding - تغيير شكل الجسم وزيادة الكتلة العضلية
+</div>
+
+<div class="btn" onclick="openPage('faq')">
+الأسئلة الشائعة
+</div>
+</div>
+</div>
+
+<!-- POWER -->
+<div id="power" class="page">
+<h2>الباور ليفتينق</h2>
+
+<div class="box">
+هي باقة تهدف إلى زيادة القوة ورفع الاوزان في السكوات والبنش والديدلفت<br><br>
+من خلال تصميم جدول يخدم هذا الهدف , جدولة تمارين مساعدة للرفعات الاساسية , استهداف جميع عضلات الجسم وتجهيزها لحمل اعلى اوزان ممكنة<br><br>
+: الباقة تتضمن <br><br>
+جدول بورلفتنق مخصص لك مع التعديل عند الحاجة<br><br>
+حساب السعرات و الماكروز مع التعديل عند الحاجة<br><br>
+تعديل طريقة اداء التمارين عن طريق الفيديو<br><br>
+الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+</div>
+
+<div class="price">السعر ٢٩٩ ريال</div>
+
+<a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
+
+<div class="back" onclick="openPage('home')">رجوع</div>
+</div>
+
+<!-- BODY -->
+<div id="body" class="page">
+<h2>البودي بلدنج</h2>
+
+<div class="box">
+ايش هي رياضة البودي بلدنج ؟ و كيف طريقة تصميم الجداول فيها ؟<br><br>
+البودي بلدنج هي رياضه تركز بشكل اساسي على البناء العضلي وخسارة الدهون واكتساب اكبر كتلة عضلية ممكنة عن طريق تصميم جدول يستهدف جميع عضلات الجسم ويركز على نقاط الضعف لتحقيق التكامل في الشكل الخارجي<br><br>
+الباقة تتضمن <br><br>
+جدول بودي بلدنج مخصص لك مع التعديل عند الحاجة<br><br>
+جدول غذائي مع حساب السعرات و الماكروز<br><br>
+تعديل (التكنيك) عن طريق الفيديو<br><br>
+الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه للرسائل الضرورية و24 ساعة للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+</div>
+
+<div class="price">السعر ٢٩٩ ريال</div>
+
+<a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
+
+<div class="back" onclick="openPage('home')">رجوع</div>
+</div>
+
+<!-- FAQ -->
+<div id="faq" class="page">
+<h2>الأسئلة الشائعة</h2>
+
 <div class="faq-item">
 <div class="faq-question" onclick="toggleFAQ(this)">آلية التواصل؟</div>
+<div class="faq-answer">عن طريق الواتس آب</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">وقت تصميم الجدول؟</div>
 <div class="faq-answer">
-يتم التواصل بشكل كامل عن طريق الواتساب لضمان سرعة الرد والمتابعة المستمرة.
+من بعد تعبئة الفورم تصميم الجدول يحتاج ٤-٦ أيام بحيث يتم بناؤه بدقة وتخصيصه لك بأكبر شكل ممكن
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">كم يستغرق تصميم الجدول؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">هل تدرب بنات؟ وإيش هي آلية المتابعة معهم؟</div>
 <div class="faq-answer">
-بعد تعبئة الفورم، يحتاج تصميم الجدول من ٤ إلى ٦ أيام، ويتم بناؤه بدقة عالية وتخصيصه بالكامل حسب هدفك واحتياجك.
+نعم، أدرب الجنسين، وآلية المتابعة هي نفس آلية المتابعة عند الرجال، واللي بتكون من خلال الوزن والقياسات وتطور الأوزان في النادي ماعدا ان تصوير الجسم بالنسبه للبنات مرفوض
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل تدرب البنات؟ وكيف تتم المتابعة؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">أقدر أوصل لهدفي من خلال التمرين في البيت؟</div>
 <div class="faq-answer">
-نعم، يتم تدريب الجنسين. وآلية المتابعة للبنات هي نفس آلية الرجال من خلال الوزن والقياسات وتطور الأداء، مع مراعاة الخصوصية حيث لا يُطلب تصوير الجسم.
+أكيد، تقدر توصل لهدفك وتسوي تحول كبير في جسمك من خلال التمرين في البيت
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل أقدر أحقق هدفي من التمرين في البيت؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">إيش الأدوات اللي أحتاج أوفرها قبل الاشتراك؟</div>
 <div class="faq-answer">
-أكيد، تقدر تحقق تحول كبير في جسمك حتى من خلال التمرين في البيت، إذا كان البرنامج مصمم بشكل صحيح ومناسب لك.
+ميزان للجسم، ميزان للأكل، شريط للقياس
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">إيش الأدوات المطلوبة قبل الاشتراك؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">أقدر أدخل معك مكالمة هاتفية قبل الاشتراك؟</div>
 <div class="faq-answer">
-ميزان وزن للجسم، ميزان طعام، وشريط قياس.
+للأسف لا، لأن الخيار هذا غير عملي ويستهلك وقت طويل من الطرفين نقدر نخصصه في بناء الخطة والتطور، ومع فورم الأسئلة ومحادثة الواتس آب الدائمة بيننا بنقدر نعرف كل شي عنك ونشكل الخطة بما يتناسب معك
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل فيه مكالمة قبل الاشتراك؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">أحتاج أسجل بيانات كثيرة يوميًا؟</div>
 <div class="faq-answer">
-للأسف لا، لأن هذا الخيار غير عملي ويستهلك وقت كبير. لكن يتم تعويض ذلك بفورم مفصل ومتابعة مستمرة عبر الواتساب لضمان فهم كامل لحالتك.
+لا، أحتاج منك بس 10 دقائق كل أسبوع تاخذ فيها صور لجسمك لو كنت حاب تصور، وتسجل القياسات وتكتب الملاحظات عن أسبوعك لا أكثر
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل لازم أسجل بيانات يوميًا؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">تضمن لي النتائج؟</div>
 <div class="faq-answer">
-لا، يكفي 10 دقائق أسبوعيًا لتسجيل القياسات والملاحظات، وإذا حاب تضيف صور يكون اختياري.
+للاسف لا ، لانه في عوامل كثيرة تتوقف عليها النتيجة (جيناتك، استجابة جسمك ، ظروف حياتك ، التزامك ، ….. ) لكن اللي اضمنه لك هو انك توصل لافضل نسخة لك اذا التزمت
 </div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل تضمن النتائج؟</div>
+<div class="faq-question" onclick="toggleFAQ(this)">ضروري اخذ صور لجسمي؟</div>
 <div class="faq-answer">
-لا يمكن ضمان النتائج بشكل مطلق، لأن ذلك يعتمد على عدة عوامل مثل التزامك، جيناتك، ونمط حياتك. لكن أضمن لك الوصول لأفضل نسخة ممكنة منك في حال التزامك بالخطة.
+لا ، مو ضروري اذا تنحرج من هالشي
 </div>
 </div>
 
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل تصوير الجسم ضروري؟</div>
-<div class="faq-answer">
-لا، التصوير اختياري تمامًا في حال كنت غير مرتاح لذلك.
+<div class="back" onclick="openPage('home')">رجوع</div>
 </div>
-</div>
+
+<a href="https://wa.me/966563035411" class="whatsapp">💬</a>
+
+</body>
+</html>
