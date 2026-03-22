@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarek Powerlifting</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 30px;
+  background: #020617;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 30px;
+}
+
+.card {
+  background: #1e293b;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: right;
+}
+
+h2 {
+  color: #38bdf8;
+}
+
+button {
+  background: #22c55e;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: auto;
+  text-align: right;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+Tarek Powerlifting 💪
+</header>
+
+<div class="section">
+<h2>🔥 اختر الباقة المناسبة ليك</h2>
+
+<div class="card">
+<h3>باقة الباورليفتينق والقوة</h3>
+<p>
+تهدف إلى زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت من خلال:
+<br><br>
+- جدول بورلفتنق مخصص لك<br>
+- تمارين مساعدة للرفعات الأساسية<br>
+- استهداف جميع عضلات الجسم<br>
+- حساب السعرات والماكروز<br>
+- تعديل التكنيك بالفيديو<br>
+- متابعة يومية<br>
+- الرد خلال 12-24 ساعة<br><br>
+
+💰 السعر: 299 ريال شهرياً
+</p>
+<button onclick="selectPlan('Powerlifting')">اشترك الآن</button>
+</div>
+
+<div class="card">
+<h3>باقة البودي بيلدينق</h3>
+<p>
+تركز على البناء العضلي وخسارة الدهون وتحقيق أفضل شكل ممكن:
+<br><br>
+- جدول تدريب مخصص<br>
+- جدول غذائي كامل<br>
+- حساب السعرات والماكروز<br>
+- تعديل التكنيك بالفيديو<br>
+- متابعة يومية<br>
+- الرد خلال 12-24 ساعة<br><br>
+
+💰 السعر: 299 ريال
+</p>
+<button onclick="selectPlan('Bodybuilding')">اشترك الآن</button>
+</div>
+</div>
+
+<div class="section">
+<h2>📝 سجل دلوقتي</h2>
+
+<form>
+<label>الاسم</label>
+<input type="text" required>
+
+<label>رقم الموبايل</label>
+<input type="text" required>
+
+<label>اختر الباقة</label>
+<select id="plan">
+  <option>Powerlifting</option>
+  <option>Bodybuilding</option>
+</select>
+
+<button type="submit">إرسال</button>
+</form>
+</div>
+
+<div class="section">
+<p>
+لو تايه ومش عارف تبدأ منين…<br>
+البرنامج ده معمول عشان يمشي معاك خطوة بخطوة<br>
+لحد ما توصل لنتيجة حقيقية 💪🔥
+</p>
+</div>
+
+<script>
+function selectPlan(plan) {
+  document.getElementById("plan").value = plan;
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
