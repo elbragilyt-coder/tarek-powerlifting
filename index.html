@@ -7,94 +7,67 @@
 
 <style>
 body {
-  font-family: Arial;
   margin: 0;
+  font-family: Arial;
   background: #000;
   color: white;
   text-align: center;
 }
 
-  header {
+header {
   padding: 20px;
   background: linear-gradient(90deg, #111, #222);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-}
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.section {
-  padding: 30px;
+.section-title {
+  color: red;
+  margin: 30px 0;
+  font-size: 26px;
 }
 
 .card {
-  background: #111;
-  margin: 20px auto;
+  border: 2px solid red;
+  border-radius: 20px;
   padding: 20px;
-  border-radius: 12px;
-  max-width: 500px;
-  text-align: right;
-  border: 1px solid red;
+  margin: 20px;
 }
 
-h2 {
-  color: red;
+.card h2 {
+  margin-bottom: 10px;
 }
 
-button {
-  background: red;
-  border: none;
-  padding: 12px;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+.card ul {
+  list-style: none;
+  padding: 0;
 }
 
-form {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 400px;
-  margin: auto;
-  text-align: right;
+.card ul li {
+  margin: 10px 0;
 }
 
-input, select {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: none;
+.price {
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
   background: #25D366;
   color: white;
-  padding: 12px;
-  border-radius: 50px;
+  border-radius: 30px;
   text-decoration: none;
+  font-size: 18px;
 }
 </style>
-}
 
-header {
-  display: flex;
-}
-</style><style>
-/* هنا تحط CSS */
-.logo {
-  width: 40px;
-  height: 40px;
-}
-
-header {
-  display: flex;
-}
-</style>
 </head>
 
 <body>
@@ -103,61 +76,39 @@ header {
 🔥 TAREK POWERLIFTING 🔥
 </header>
 
-<div class="section">
-<h2>🔥 اختر الباقة المناسبة ليك</h2>
+<h2 class="section-title">🔥 اختر الباقة المناسبة ليك 🔥</h2>
 
 <div class="card">
-<h3>باقة الباورليفتينق والقوة</h3>
-<p>
-زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت 💪<br><br>
-✔ جدول مخصص<br>
-✔ حساب السعرات<br>
-✔ متابعة يومية<br>
-✔ تعديل التكنيك بالفيديو<br><br>
-💰 السعر: 299 ريال
-</p>
+<h2>باقة الباورليفتينج والقوة 💪</h2>
+<p>زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت</p>
+
+<ul>
+<li>✔ جدول مخصص</li>
+<li>✔ حساب السعرات</li>
+<li>✔ متابعة يومية</li>
+<li>✔ تعديل التكنيك بالفيديو</li>
+</ul>
+
+<div class="price">💰 السعر: 299 ريال</div>
+
+<a class="whatsapp" href="https://wa.me/201000000000">📱 تواصل واتساب</a>
 </div>
 
 <div class="card">
-<h3>باقة البودي بيلدينق</h3>
-<p>
-بناء عضلي + خسارة دهون 🔥<br><br>
-✔ جدول تدريب<br>
-✔ نظام غذائي<br>
-✔ متابعة يومية<br>
-✔ تحسين الأداء<br><br>
-💰 السعر: 299 ريال
-</p>
+<h2>باقة البودي بيلدينج 🔥</h2>
+<p>بناء عضلي + خسارة دهون</p>
+
+<ul>
+<li>✔ جدول تدريب</li>
+<li>✔ نظام غذائي</li>
+<li>✔ متابعة يومية</li>
+<li>✔ تحسين الأداء</li>
+</ul>
+
+<div class="price">💰 السعر: 299 ريال</div>
+
+<a class="whatsapp" href="https://wa.me/201000000000">📱 تواصل واتساب</a>
 </div>
-
-</div>
-
-<div class="section">
-<h2>📝 سجل الآن</h2>
-
-<form>
-<input type="text" placeholder="اسمك">
-<input type="text" placeholder="رقمك">
-
-<select>
-<option>Powerlifting</option>
-<option>Bodybuilding</option>
-</select>
-
-<button>إرسال</button>
-</form>
-</div>
-
-<div class="section">
-<p>
-لو تايه ومش عارف تبدأ منين…<br>
-ابدأ معانا خطوة بخطوة لحد ما توصل لأقوى نسخة منك 🔥💪
-</p>
-</div>
-
-<a href="https://wa.me/966XXXXXXXXX" class="whatsapp">
-💬 واتساب
-</a>
 
 </body>
 </html>
