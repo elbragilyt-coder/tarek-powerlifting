@@ -16,15 +16,14 @@ body {
 
 header {
     padding: 20px;
-    background: linear-gradient(90deg, #111, #222);
-    font-size: 20px;
+    background: #111;
     color: #ff3c00;
 }
 
 .section {
     display: none;
     padding: 30px;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.5s;
 }
 
 .active {
@@ -34,18 +33,12 @@ header {
 .btn {
     display: block;
     background: #ff3c00;
-    color: white;
     padding: 15px;
     margin: 15px auto;
     width: 80%;
     border-radius: 30px;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ff5722;
 }
 
 .card {
@@ -54,6 +47,7 @@ header {
     padding: 20px;
     margin-top: 20px;
     text-align: right;
+    line-height: 1.8;
 }
 
 .whatsapp {
@@ -62,9 +56,8 @@ header {
 
 .back {
     margin-top: 20px;
-    display: inline-block;
-    color: #ff3c00;
     cursor: pointer;
+    color: #ff3c00;
 }
 
 @keyframes fadeIn {
@@ -95,7 +88,7 @@ function showSection(id){
     </div>
 
     <div class="btn" onclick="showSection('body')">
-        BodyBuilding - تحسين شكل الجسم
+        BodyBuilding - زيادة الكتلة العضلية
     </div>
 
     <div class="btn" onclick="showSection('faq')">
@@ -103,42 +96,50 @@ function showSection(id){
     </div>
 </div>
 
-<!-- باورلفتينج -->
+<!-- باور -->
 <div id="power" class="section">
-    <h2>باقة الباورلفتينج</h2>
+    <h2>🔥 باقة الباورليفتنج 🔥</h2>
 
     <div class="card">
-        💪 زيادة القوة ورفع الأوزان<br><br>
-        ✔ جدول مخصص<br>
-        ✔ حساب السعرات<br>
-        ✔ متابعة يومية<br>
-        ✔ تعديل التكنيك بالفيديو<br><br>
-        💰 السعر: 299 ريال
+        <p>
+        هي باقة تهدف إلى زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت من خلال تصميم جدول يخدم هذا الهدف، وجدولة تمارين مساعدة للرفعات الأساسية واستهداف جميع عضلات الجسم وتجهيزها لحمل أعلى أوزان ممكنة.
+        </p>
+
+        <p><strong>📌 الباقة تتضمن:</strong></p>
+
+        <p>✔ جدول باورليفتنج مخصص لك مع التعديل عند الحاجة</p>
+        <p>✔ حساب السعرات والماكروز مع التعديل عند الحاجة</p>
+        <p>✔ تعديل طريقة أداء التمارين عن طريق الفيديو</p>
+        <p>✔ الرد على جميع الأسئلة خلال 12 ساعة للضروري و24 ساعة لغير الضروري (عدا الخميس والجمعة)</p>
+
+        <p>💰 السعر: 299 ريال</p>
     </div>
 
-    <a class="btn whatsapp" href="https://wa.me/966563035411">
-        تواصل واتساب
-    </a>
+    <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
 
     <div class="back" onclick="showSection('home')">رجوع</div>
 </div>
 
-<!-- بادي بيلدنج -->
+<!-- بودي -->
 <div id="body" class="section">
-    <h2>باقة البودي بيلدنج</h2>
+    <h2>🔥 باقة البودي بيلدنج 🔥</h2>
 
     <div class="card">
-        🔥 بناء عضلي + خسارة دهون<br><br>
-        ✔ جدول تدريب<br>
-        ✔ نظام غذائي<br>
-        ✔ متابعة يومية<br>
-        ✔ تحسين الأداء<br><br>
-        💰 السعر: 299 ريال
+        <p>
+        البودي بلدنج هي رياضة تركز بشكل أساسي على البناء العضلي وخسارة الدهون واكتساب أكبر كتلة عضلية ممكنة من خلال تصميم جدول يستهدف جميع عضلات الجسم ويركز على نقاط الضعف لتحقيق أفضل شكل ممكن.
+        </p>
+
+        <p><strong>📌 الباقة تتضمن:</strong></p>
+
+        <p>✔ جدول بودي بيلدنج مخصص لك مع التعديل عند الحاجة</p>
+        <p>✔ جدول غذائي مع حساب السعرات والماكروز</p>
+        <p>✔ تعديل التكنيك عن طريق الفيديو</p>
+        <p>✔ الرد على الأسئلة من 1 إلى 6 مساءً (حد أقصى 4 ساعات للضروري و24 ساعة لغير الضروري)</p>
+
+        <p>💰 السعر: 299 ريال</p>
     </div>
 
-    <a class="btn whatsapp" href="https://wa.me/966563035411">
-        تواصل واتساب
-    </a>
+    <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
 
     <div class="back" onclick="showSection('home')">رجوع</div>
 </div>
@@ -149,38 +150,21 @@ function showSection(id){
 
     <div class="card">
 
-    <p><strong>آلية التواصل؟</strong><br>
-    عن طريق الواتس آب</p>
+    <p><strong>وقت تصميم الجدول؟</strong><br>٤-٦ أيام</p>
 
-    <p><strong>وقت تصميم الجدول؟</strong><br>
-    ٤-٦ أيام بعد الفورم</p>
+    <p><strong>هل تدرب بنات؟</strong><br>نعم، بدون تصوير</p>
 
-    <p><strong>هل تدرب بنات؟</strong><br>
-    نعم، بدون تصوير</p>
+    <p><strong>تمرين البيت؟</strong><br>تقدر توصل لهدفك</p>
 
-    <p><strong>تمرين في البيت؟</strong><br>
-    تقدر توصل لهدفك</p>
+    <p><strong>الأدوات المطلوبة؟</strong><br>ميزان + ميزان أكل + شريط قياس</p>
 
-    <p><strong>الأدوات المطلوبة؟</strong><br>
-    ميزان + ميزان أكل + شريط قياس</p>
+    <p><strong>تسجيل يومي؟</strong><br>10 دقائق أسبوعيًا</p>
 
-    <p><strong>مكالمة قبل الاشتراك؟</strong><br>
-    لا، التواصل واتساب فقط</p>
+    <p><strong>الأكل لازم ثابت؟</strong><br>لا</p>
 
-    <p><strong>تسجيل يومي؟</strong><br>
-    10 دقائق أسبوعيًا</p>
+    <p><strong>الدفع خارج السعودية؟</strong><br>تحويل أو ماي فاتورة</p>
 
-    <p><strong>الأكل لازم ثابت؟</strong><br>
-    لا، أي أكل ضمن السعرات</p>
-
-    <p><strong>الدفع خارج السعودية؟</strong><br>
-    تحويل أو ماي فاتورة</p>
-
-    <p><strong>تضمن النتائج؟</strong><br>
-    حسب التزامك</p>
-
-    <p><strong>الصور ضرورية؟</strong><br>
-    لا</p>
+    <p><strong>تضمن النتائج؟</strong><br>حسب التزامك</p>
 
     </div>
 
