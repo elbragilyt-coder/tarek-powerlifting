@@ -14,101 +14,123 @@ body {
   text-align: center;
 }
 
+/* الهيدر */
 header {
-  padding: 20px;
-  background: linear-gradient(90deg, #111, #222);
+  background: #111;
+  color: #ff3c00;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 25px;
+}
+
+/* الصورة الرئيسية */
+.hero {
+  height: 350px;
+  background: url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e') center/cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  font-size: 24px;
+}
+
+.logo {
+  font-size: 60px;
+  color: #ff3c00;
   font-weight: bold;
 }
 
+/* النص */
 .section-title {
-  color: red;
-  margin: 30px 0;
-  font-size: 26px;
+  color: #ff3c00;
+  font-size: 22px;
+  margin: 20px 0;
 }
 
+/* الكروت */
 .card {
   border: 2px solid red;
   border-radius: 20px;
-  padding: 20px;
   margin: 20px;
+  padding: 20px;
 }
 
-.card h2 {
-  margin-bottom: 10px;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.card ul li {
-  margin: 10px 0;
-}
-
-.price {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-.whatsapp {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 25px;
-  background: #25D366;
+/* الأزرار */
+.btn {
+  display: block;
+  background: #ff3c00;
   color: white;
+  padding: 15px;
+  margin: 15px auto;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 18px;
+  width: 80%;
+  font-size: 16px;
+}
+
+/* زر الواتساب */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-🔥 TAREK POWERLIFTING 🔥
+  <div class="menu">☰</div>
+  التدريب مع طارق
 </header>
+
+<section class="hero">
+  <div class="overlay">
+    <div class="logo">T</div>
+  </div>
+</section>
 
 <h2 class="section-title">🔥 اختر الباقة المناسبة ليك 🔥</h2>
 
 <div class="card">
-<h2>باقة الباورليفتينج والقوة 💪</h2>
-<p>زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت</p>
-
-<ul>
-<li>✔ جدول مخصص</li>
-<li>✔ حساب السعرات</li>
-<li>✔ متابعة يومية</li>
-<li>✔ تعديل التكنيك بالفيديو</li>
-</ul>
-
-<div class="price">💰 السعر: 299 ريال</div>
-
-<a class="whatsapp" href="https://wa.me/966563035411">📱 تواصل واتساب</a>
+  <h3>باقة الباورليفتنج والقوة</h3>
+  <p>💪 زيادة القوة ورفع الأوزان</p>
+  <p>✔ جدول مخصص</p>
+  <p>✔ حساب السعرات</p>
+  <p>✔ متابعة يومية</p>
+  <p>💰 السعر: 299 ريال</p>
+  <a href="https://wa.me/966563035411" class="btn">اشترك الآن</a>
 </div>
 
 <div class="card">
-<h2>باقة البودي بيلدينج 🔥</h2>
-<p>بناء عضلي + خسارة دهون</p>
-
-<ul>
-<li>✔ جدول تدريب</li>
-<li>✔ نظام غذائي</li>
-<li>✔ متابعة يومية</li>
-<li>✔ تحسين الأداء</li>
-</ul>
-
-<div class="price">💰 السعر: 299 ريال</div>
-
-<a class="whatsapp" href="https://wa.me/201000000000">📱 تواصل واتساب</a>
+  <h3>باقة البودي بيلدينج</h3>
+  <p>🔥 بناء عضلي + خسارة دهون</p>
+  <p>✔ جدول تدريب</p>
+  <p>✔ نظام غذائي</p>
+  <p>✔ متابعة يومية</p>
+  <p>💰 السعر: 299 ريال</p>
+  <a href="https://wa.me/966563035411" class="btn">اشترك الآن</a>
 </div>
+
+<a href="https://wa.me/966563035411" class="whatsapp">💬 واتساب</a>
 
 </body>
 </html>
