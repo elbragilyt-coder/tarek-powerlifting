@@ -6,12 +6,19 @@
 <title>TAREK POWERLIFTING</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
+body {
+    margin:0;
+    font-family:Arial;
+    background:#000;
+    color:white;
+    text-align:center;
+}
 
+/* الخلفية */
 .hero {
     position:relative;
     height:100vh;
-    background:url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e') center/cover;
+    background:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61') center/cover;
 }
 
 .overlay {
@@ -21,20 +28,22 @@ body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
     background:rgba(0,0,0,0.7);
 }
 
+/* دخان */
 .smoke {
     position:absolute;
     width:100%;
     height:100%;
     background:url('https://i.ibb.co/7vDLJFb/smoke.png');
     opacity:0.2;
-    animation:smokeMove 20s infinite linear;
+    animation:smokeMove 25s linear infinite;
 }
 
 @keyframes smokeMove {
-    0%{background-position:0 0;}
-    100%{background-position:1000px 0;}
+    0% {background-position:0 0;}
+    100% {background-position:1000px 0;}
 }
 
+/* اللوجو */
 .logo {
     position:absolute;
     top:40%;
@@ -44,8 +53,13 @@ body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
     color:#ff3c1f;
 }
 
-.text {margin-top:-100px;padding:20px;}
+/* النص */
+.text {
+    padding:20px;
+    margin-top:-100px;
+}
 
+/* الأزرار */
 .btn {
     background:#ff3c1f;
     padding:15px;
@@ -53,20 +67,28 @@ body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
     width:80%;
     border-radius:30px;
     cursor:pointer;
-    display:block;
-    color:white;
-    text-decoration:none;
 }
 
+/* المحتوى */
 .content {
     display:none;
+    padding:20px;
     border:1px solid red;
     margin:20px;
-    padding:20px;
     border-radius:20px;
     text-align:right;
 }
 
+/* الفورم */
+input, select, textarea {
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    border:none;
+}
+
+/* زر واتساب */
 .whatsapp {
     position:fixed;
     bottom:20px;
@@ -94,63 +116,24 @@ body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
 
 <div id="power" class="content">
 <h3>باقة الباورلفتينق</h3>
-<p>زيادة القوة في السكوات والبنش والديدلفت</p>
+<p>
+هي باقة تهدف إلى زيادة القوة ورفع الاوزان في السكوات والبنش والديدلفت
+</p>
 </div>
 
 <div class="btn" onclick="toggle('body')">Bodybuilding - تحسين الجسم</div>
 
 <div id="body" class="content">
 <h3>باقة البودي بلدنج</h3>
-<p>بناء عضلي وخسارة دهون</p>
+<p>
+بناء عضلي + خسارة دهون
+</p>
 </div>
 
-<a href="form.html" class="btn">🔥 سجل الآن</a>
+<div class="btn" onclick="toggle('form')">🔥 تسجيل الاشتراك</div>
 
-</div>
-
-<a href="https://wa.me/966563035411" class="whatsapp">💬</a>
-
-<script>
-function toggle(id){
-let el=document.getElementById(id);
-el.style.display=(el.style.display==="block")?"none":"block";
-}
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تسجيل الاشتراك</title>
-
-<style>
-body{background:#000;color:white;font-family:Arial;text-align:center;}
-
-input,select,textarea{
-width:90%;
-padding:12px;
-margin:10px;
-border-radius:10px;
-border:none;
-}
-
-button{
-background:#ff3c1f;
-color:white;
-padding:15px;
-border:none;
-border-radius:30px;
-width:80%;
-}
-</style>
-</head>
-
-<body>
-
-<h2>🔥 تسجيل الاشتراك 🔥</h2>
+<!-- الفورم -->
+<div id="form" class="content">
 
 <form action="https://formsubmit.co/YOUR-EMAIL" method="POST">
 
@@ -174,9 +157,22 @@ width:80%;
 
 <textarea name="notes" placeholder="ملاحظات"></textarea>
 
-<button type="submit">إرسال</button>
+<div class="btn" onclick="submit()">إرسال</div>
 
 </form>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/966563035411" class="whatsapp">💬</a>
+
+<script>
+function toggle(id){
+let el=document.getElementById(id);
+el.style.display=(el.style.display==="block")?"none":"block";
+}
+</script>
 
 </body>
 </html>
