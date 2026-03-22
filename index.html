@@ -6,15 +6,8 @@
 <title>TAREK POWERLIFTING</title>
 
 <style>
-body {
-    margin:0;
-    font-family:Arial;
-    background:#000;
-    color:white;
-    text-align:center;
-}
+body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
 
-/* الخلفية */
 .hero {
     position:relative;
     height:100vh;
@@ -28,7 +21,6 @@ body {
     background:rgba(0,0,0,0.7);
 }
 
-/* دخان */
 .smoke {
     position:absolute;
     width:100%;
@@ -43,7 +35,6 @@ body {
     100% {background-position:1000px 0;}
 }
 
-/* اللوجو */
 .logo {
     position:absolute;
     top:40%;
@@ -53,13 +44,8 @@ body {
     color:#ff3c1f;
 }
 
-/* النص */
-.text {
-    padding:20px;
-    margin-top:-100px;
-}
+.text {padding:20px;margin-top:-100px;}
 
-/* الأزرار */
 .btn {
     background:#ff3c1f;
     padding:15px;
@@ -69,7 +55,6 @@ body {
     cursor:pointer;
 }
 
-/* المحتوى */
 .content {
     display:none;
     padding:20px;
@@ -88,7 +73,6 @@ input, select, textarea {
     border:none;
 }
 
-/* زر واتساب */
 .whatsapp {
     position:fixed;
     bottom:20px;
@@ -112,27 +96,49 @@ input, select, textarea {
 
 <h3>اختر الباقة المناسبة لك</h3>
 
+<!-- POWER -->
 <div class="btn" onclick="toggle('power')">Powerlifting - زيادة القوة</div>
 
 <div id="power" class="content">
 <h3>باقة الباورلفتينق</h3>
+
 <p>
 هي باقة تهدف إلى زيادة القوة ورفع الاوزان في السكوات والبنش والديدلفت
+من خلال تصميم جدول يخدم هذا الهدف , جدولة تمارين مساعدة للرفعات الاساسية , 
+استهداف جميع عضلات الجسم وتجهيزها لحمل اعلى اوزان ممكنة
+</p>
+
+<p>
+✔ جدول بورلفتنق مخصص لك مع التعديل عند الحاجة<br>
+✔ حساب السعرات و الماكروز مع التعديل عند الحاجة<br>
+✔ تعديل طريقة اداء التمارين عن طريق الفيديو<br>
+✔ الرد خلال 12 ساعة للضروري و24 ساعة للروتيني
 </p>
 </div>
 
-<div class="btn" onclick="toggle('body')">Bodybuilding - تحسين الجسم</div>
+<!-- BODY -->
+<div class="btn" onclick="toggle('body')">Bodybuilding - تحسين شكل الجسم</div>
 
 <div id="body" class="content">
 <h3>باقة البودي بلدنج</h3>
+
 <p>
-بناء عضلي + خسارة دهون
+البودي بلدنج هي رياضة تركز على البناء العضلي وخسارة الدهون 
+واكتساب اكبر كتلة عضلية ممكنة عن طريق تصميم جدول يستهدف جميع عضلات الجسم
+ويركز على نقاط الضعف لتحقيق الشكل المثالي
+</p>
+
+<p>
+✔ جدول بودي بلدنج مخصص لك مع التعديل عند الحاجة<br>
+✔ نظام غذائي مع حساب السعرات والماكروز<br>
+✔ تعديل التكنيك بالفيديو<br>
+✔ متابعة مستمرة
 </p>
 </div>
 
+<!-- FORM -->
 <div class="btn" onclick="toggle('form')">🔥 تسجيل الاشتراك</div>
 
-<!-- الفورم -->
 <div id="form" class="content">
 
 <form action="https://formsubmit.co/YOUR-EMAIL" method="POST">
@@ -157,7 +163,7 @@ input, select, textarea {
 
 <textarea name="notes" placeholder="ملاحظات"></textarea>
 
-<div class="btn" onclick="submit()">إرسال</div>
+<button type="submit" class="btn">إرسال</button>
 
 </form>
 
