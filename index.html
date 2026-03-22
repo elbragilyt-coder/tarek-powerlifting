@@ -11,17 +11,24 @@ body {
     font-family: Arial;
     background: #000;
     color: white;
+}
+
+/* كل صفحة */
+.page {
+    display: none;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
     text-align: center;
 }
 
+/* الرئيسية */
 .hero {
-    height: 100vh;
     background: url('https://images.unsplash.com/photo-1550345332-09e3ac987658') center/cover no-repeat;
     position: relative;
 }
 
-.hero::after {
-    content:"";
+.overlay {
     position:absolute;
     width:100%;
     height:100%;
@@ -33,8 +40,10 @@ body {
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+    z-index:2;
 }
 
+/* الأزرار */
 .btn {
     display:block;
     background:#ff3c1f;
@@ -43,15 +52,11 @@ body {
     width:280px;
     border-radius:30px;
     cursor:pointer;
-    color:white;
     text-decoration:none;
+    color:white;
 }
 
-.section {
-    display:none;
-    padding:30px;
-}
-
+/* المحتوى */
 .box {
     border:2px solid #ff3c1f;
     border-radius:20px;
@@ -67,6 +72,7 @@ body {
     font-weight:bold;
 }
 
+/* رجوع */
 .back {
     margin-top:20px;
     background:#ff3c1f;
@@ -77,20 +83,20 @@ body {
 }
 
 /* واتساب */
-.whatsapp-fixed {
+.whatsapp {
     position:fixed;
     bottom:20px;
     left:20px;
     background:#25D366;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
     color:white;
+    text-decoration:none;
 }
 
 /* FAQ */
 .faq-item {
-    margin-bottom:15px;
+    margin:15px 0;
     text-align:right;
 }
 
@@ -109,13 +115,8 @@ body {
 
 <script>
 function openPage(id){
-    document.querySelector('.hero').style.display="none";
+    document.querySelectorAll('.page').forEach(p=>p.style.display="none");
     document.getElementById(id).style.display="block";
-}
-
-function goBack(){
-    document.querySelector('.hero').style.display="block";
-    document.querySelectorAll('.section').forEach(el=>el.style.display="none");
 }
 
 function toggleFAQ(el){
@@ -128,20 +129,21 @@ function toggleFAQ(el){
 
 <body>
 
-<div class="hero">
-<div class="center">
+<!-- الرئيسية -->
+<div id="home" class="page hero" style="display:block;">
+<div class="overlay"></div>
 
+<div class="center">
 <h2>🔥 TAREK POWERLIFTING 🔥</h2>
 
 <div class="btn" onclick="openPage('power')">Powerlifting</div>
 <div class="btn" onclick="openPage('body')">Bodybuilding</div>
 <div class="btn" onclick="openPage('faq')">الأسئلة الشائعة</div>
-
 </div>
 </div>
 
 <!-- POWER -->
-<div id="power" class="section">
+<div id="power" class="page">
 <h2>الباور ليفتينق</h2>
 
 <div class="box">
@@ -158,11 +160,11 @@ function toggleFAQ(el){
 
 <a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
 
-<div class="back" onclick="goBack()">رجوع</div>
+<div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
 <!-- BODY -->
-<div id="body" class="section">
+<div id="body" class="page">
 <h2>البودي بلدنج</h2>
 
 <div class="box">
@@ -179,11 +181,11 @@ function toggleFAQ(el){
 
 <a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
 
-<div class="back" onclick="goBack()">رجوع</div>
+<div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
 <!-- FAQ -->
-<div id="faq" class="section">
+<div id="faq" class="page">
 <h2>الأسئلة الشائعة</h2>
 
 <div class="faq-item">
@@ -193,24 +195,19 @@ function toggleFAQ(el){
 
 <div class="faq-item">
 <div class="faq-question" onclick="toggleFAQ(this)">وقت تصميم الجدول؟</div>
-<div class="faq-answer">4-6 أيام بعد تعبئة الفورم</div>
+<div class="faq-answer">٤-٦ أيام</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question" onclick="toggleFAQ(this)">هل أقدر أتمرن في البيت؟</div>
-<div class="faq-answer">نعم تقدر توصل لهدفك من البيت</div>
+<div class="faq-answer">نعم تقدر</div>
 </div>
 
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل تضمن النتائج؟</div>
-<div class="faq-answer">لا، النتائج تعتمد على التزامك وعوامل كثيرة</div>
+<div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
-<div class="back" onclick="goBack()">رجوع</div>
-</div>
-
-<!-- زر واتساب -->
-<a href="https://wa.me/966563035411" class="whatsapp-fixed">💬</a>
+<!-- واتساب -->
+<a href="https://wa.me/966563035411" class="whatsapp">💬</a>
 
 </body>
 </html>
