@@ -8,62 +8,115 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #111;
   color: white;
   text-align: center;
 }
 
-header {
-  background: #000;
-  padding: 20px;
-  font-size: 20px;
-  color: red;
-}
-
+/* الخلفية */
 .hero {
-  padding: 40px 20px;
+  position: relative;
+  height: 100vh;
+  display: flex;
 }
 
+/* صورتين */
+.left, .right {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.left {
+  background-image: url('https://images.unsplash.com/photo-1594737625785-cdd7b2f7c59d?q=80&w=1200');
+}
+
+.right {
+  background-image: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200');
+}
+
+/* طبقة دخان */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.9) 100%);
+}
+
+/* المحتوى */
+.content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* اللوجو */
+.logo {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff3c1f;
+  margin-bottom: 20px;
+}
+
+/* النص */
+.subtitle {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* الأزرار */
 .btn {
   display: block;
   margin: 15px auto;
-  padding: 15px;
+  padding: 16px;
   width: 80%;
-  max-width: 300px;
-  border-radius: 30px;
-  background: red;
+  max-width: 320px;
+  border-radius: 40px;
+  background: #ff3c1f;
   color: white;
   text-decoration: none;
   font-size: 18px;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* الصفحات */
 .section {
   display: none;
-  padding: 20px;
+  padding: 30px 15px;
 }
 
 .card {
-  border: 1px solid red;
-  border-radius: 15px;
+  border: 1px solid #ff3c1f;
+  border-radius: 20px;
   padding: 20px;
   margin: 20px;
 }
 
 .whatsapp {
   background: #25D366;
-  margin-top: 20px;
 }
 
 .back {
-  background: gray;
+  background: #333;
 }
 </style>
 
 <script>
 function showPage(id) {
-  document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
-  document.getElementById(id).style.display = 'block';
+  document.getElementById("home").style.display = "none";
+  document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+
+function goHome() {
+  document.getElementById("home").style.display = "block";
+  document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
 }
 </script>
 
@@ -71,46 +124,49 @@ function showPage(id) {
 
 <body>
 
-<header>
-🔥 TAREK POWERLIFTING 🔥
-</header>
-
 <!-- الصفحة الرئيسية -->
-<div id="home" class="section" style="display:block">
+<div id="home">
   <div class="hero">
-    <h2>اختر البرنامج المناسب لك</h2>
+    
+    <div class="left"></div>
+    <div class="right"></div>
 
-    <a href="#" class="btn" onclick="showPage('power')">
-      زيادة القوة - Powerlifting
-    </a>
+    <div class="overlay"></div>
 
-    <a href="#" class="btn" onclick="showPage('body')">
-      زيادة الكتلة - Bodybuilding
-    </a>
+    <div class="content">
+      <div class="logo">T</div>
 
-    <a href="#" class="btn" onclick="showPage('about')">
-      عني + الأسئلة الشائعة
-    </a>
+      <p class="subtitle">لشرح اكثر عن الباقه ومحتواها يرجى الضغط عليها</p>
+
+      <a class="btn" onclick="showPage('power')">
+        Powerlifting - زيادة القوة
+      </a>
+
+      <a class="btn" onclick="showPage('body')">
+        BodyBuilding - تحسين شكل الجسم
+      </a>
+    </div>
+
   </div>
 </div>
 
-<!-- باورليفتنج -->
+<!-- باور -->
 <div id="power" class="section">
   <h2>🔥 باقة القوة 🔥</h2>
 
   <div class="card">
     <p>💪 زيادة القوة في السكوات والبنش والديدلفت</p>
     <p>✔ جدول مخصص</p>
-    <p>✔ متابعة يومية</p>
     <p>✔ حساب السعرات</p>
+    <p>✔ متابعة يومية</p>
     <p>💰 السعر: 299 ريال</p>
   </div>
 
-  <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
-  <a class="btn back" onclick="showPage('home')">رجوع</a>
+  <a class="btn whatsapp" href="https://wa.me/966563035411">واتساب</a>
+  <a class="btn back" onclick="goHome()">رجوع</a>
 </div>
 
-<!-- بودي بيلدنج -->
+<!-- بودي -->
 <div id="body" class="section">
   <h2>🔥 باقة الكتلة 🔥</h2>
 
@@ -122,41 +178,8 @@ function showPage(id) {
     <p>💰 السعر: 299 ريال</p>
   </div>
 
-  <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
-  <a class="btn back" onclick="showPage('home')">رجوع</a>
-</div>
-
-<!-- عني + FAQ -->
-<div id="about" class="section">
-  <h2>📌 عني / الأسئلة الشائعة</h2>
-
-  <div class="card" style="text-align:right">
-
-    <p><b>آلية التواصل؟</b><br>عن طريق الواتساب</p>
-
-    <p><b>وقت تصميم الجدول؟</b><br>٤-٦ أيام</p>
-
-    <p><b>هل تدرب بنات؟</b><br>نعم، بدون تصوير</p>
-
-    <p><b>تمرين البيت؟</b><br>تقدر توصل لهدفك</p>
-
-    <p><b>الأدوات المطلوبة؟</b><br>ميزان جسم + ميزان أكل + شريط قياس</p>
-
-    <p><b>مكالمة قبل الاشتراك؟</b><br>لا، التواصل واتساب</p>
-
-    <p><b>تسجيل يومي؟</b><br>10 دقائق أسبوعيًا فقط</p>
-
-    <p><b>الأكل رز ودجاج؟</b><br>لا، أي أكل ضمن السعرات</p>
-
-    <p><b>تضمن النتائج؟</b><br>لا، حسب التزامك</p>
-
-    <p><b>الصور ضرورية؟</b><br>لا</p>
-
-    <p><b>مدة الرد؟</b><br>5-7 أيام</p>
-
-  </div>
-
-  <a class="btn back" onclick="showPage('home')">رجوع</a>
+  <a class="btn whatsapp" href="https://wa.me/966563035411">واتساب</a>
+  <a class="btn back" onclick="goHome()">رجوع</a>
 </div>
 
 </body>
