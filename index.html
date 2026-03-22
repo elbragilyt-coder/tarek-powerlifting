@@ -29,13 +29,12 @@ body {
     background: rgba(0,0,0,0.75);
 }
 
-/* النص في النص */
+/* النص */
 .center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
 }
 
 /* الأزرار */
@@ -47,23 +46,12 @@ body {
     width: 280px;
     border-radius: 30px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
 }
 
 /* الصفحات */
 .section {
     display: none;
     padding: 30px;
-    animation: fade 0.4s;
-}
-
-@keyframes fade {
-    from {opacity:0;}
-    to {opacity:1;}
 }
 
 .box {
@@ -74,6 +62,13 @@ body {
     line-height: 1.9;
 }
 
+.price {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ff3c1f;
+    font-weight: bold;
+}
+
 /* رجوع */
 .back {
     margin-top: 20px;
@@ -82,6 +77,19 @@ body {
     border-radius: 20px;
     display: inline-block;
     cursor: pointer;
+}
+
+/* زر واتساب ثابت */
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 </style>
 
@@ -101,7 +109,7 @@ function goBack(){
 
 <body>
 
-<!-- الرئيسية -->
+<!-- الصفحة الرئيسية -->
 <div class="hero">
     <div class="center">
         <h2>🔥 TAREK POWERLIFTING 🔥</h2>
@@ -134,9 +142,13 @@ function goBack(){
 
 تعديل طريقة اداء التمارين عن طريق الفيديو<br><br>
 
-الرد على جميع الأسئلة والاستفسارات من الساعة خلال ١٢ ساعه كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
 
     </div>
+
+    <div class="price">السعر ٢٩٩ ريال</div>
+
+    <a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
 
     <div class="back" onclick="goBack()">رجوع</div>
 </div>
@@ -151,7 +163,7 @@ function goBack(){
 
 البودي بلدنج هي رياضه تركز بشكل اساسي على البناء العضلي وخسارة الدهون واكتساب اكبر كتلة عضلية ممكنة عن طريق تصميم جدول يستهدف جميع عضلات الجسم ويركز على نقاط الضعف لتحقيق التكامل في الشكل الخارجي<br><br>
 
-الباقة تتضمن<br><br>
+الباقة تتضمن <br><br>
 
 جدول بودي بلدنج مخصص لك مع التعديل عند الحاجة<br><br>
 
@@ -159,12 +171,19 @@ function goBack(){
 
 تعديل (التكنيك) عن طريق الفيديو<br><br>
 
-الرد على جميع الأسئلة والاستفسارات من الساعة 1-6 م فيما لا يتجاوز 4 ساعات كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه  للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
 
     </div>
 
+    <div class="price">السعر ٢٩٩ ريال</div>
+
+    <a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
+
     <div class="back" onclick="goBack()">رجوع</div>
 </div>
+
+<!-- زر واتساب ثابت -->
+<a href="https://wa.me/966563035411" class="whatsapp-fixed">💬</a>
 
 </body>
 </html>
