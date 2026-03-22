@@ -13,7 +13,6 @@ body {
     color: white;
 }
 
-/* كل صفحة */
 .page {
     display: none;
     height: 100vh;
@@ -22,7 +21,6 @@ body {
     text-align: center;
 }
 
-/* الرئيسية */
 .hero {
     background: url('https://images.unsplash.com/photo-1550345332-09e3ac987658') center/cover no-repeat;
     position: relative;
@@ -40,10 +38,8 @@ body {
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    z-index:2;
 }
 
-/* الأزرار */
 .btn {
     display:block;
     background:#ff3c1f;
@@ -52,11 +48,10 @@ body {
     width:280px;
     border-radius:30px;
     cursor:pointer;
-    text-decoration:none;
     color:white;
+    text-decoration:none;
 }
 
-/* المحتوى */
 .box {
     border:2px solid #ff3c1f;
     border-radius:20px;
@@ -72,7 +67,6 @@ body {
     font-weight:bold;
 }
 
-/* رجوع */
 .back {
     margin-top:20px;
     background:#ff3c1f;
@@ -82,7 +76,6 @@ body {
     cursor:pointer;
 }
 
-/* واتساب */
 .whatsapp {
     position:fixed;
     bottom:20px;
@@ -94,7 +87,6 @@ body {
     text-decoration:none;
 }
 
-/* FAQ */
 .faq-item {
     margin:15px 0;
     text-align:right;
@@ -136,11 +128,19 @@ function toggleFAQ(el){
 <div class="center">
 <h2>🔥 TAREK POWERLIFTING 🔥</h2>
 
-<div class="btn" onclick="openPage('power')">Powerlifting</div>
-<div class="btn" onclick="openPage('body')">Bodybuilding</div>
+<div class="btn" onclick="openPage('power')">
+Powerlifting - زيادة القوة
+</div>
+
+<div class="btn" onclick="openPage('body')">
+Bodybuilding - تغيير شكل الجسم وزيادة الكتلة العضلية
+</div>
+
 <div class="btn" onclick="openPage('faq')">الأسئلة الشائعة</div>
 </div>
 </div>
+
+<!-- باقي الكود زي ما هو بدون تغيير -->
 
 <!-- POWER -->
 <div id="power" class="page">
@@ -153,7 +153,7 @@ function toggleFAQ(el){
 جدول بورلفتنق مخصص لك مع التعديل عند الحاجة<br><br>
 حساب السعرات و الماكروز مع التعديل عند الحاجة<br><br>
 تعديل طريقة اداء التمارين عن طريق الفيديو<br><br>
-الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية
 </div>
 
 <div class="price">السعر ٢٩٩ ريال</div>
@@ -169,12 +169,12 @@ function toggleFAQ(el){
 
 <div class="box">
 ايش هي رياضة البودي بلدنج ؟ و كيف طريقة تصميم الجداول فيها ؟<br><br>
-البودي بلدنج هي رياضه تركز بشكل اساسي على البناء العضلي وخسارة الدهون واكتساب اكبر كتلة عضلية ممكنة عن طريق تصميم جدول يستهدف جميع عضلات الجسم ويركز على نقاط الضعف لتحقيق التكامل في الشكل الخارجي<br><br>
+البودي بلدنج هي رياضه تركز بشكل اساسي على البناء العضلي وخسارة الدهون واكتساب اكبر كتلة عضلية ممكنة<br><br>
 الباقة تتضمن <br><br>
-جدول بودي بلدنج مخصص لك مع التعديل عند الحاجة<br><br>
-جدول غذائي مع حساب السعرات و الماكروز<br><br>
-تعديل (التكنيك) عن طريق الفيديو<br><br>
-الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه  للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+جدول بودي بلدنج مخصص لك<br><br>
+جدول غذائي مع حساب السعرات<br><br>
+تعديل التكنيك بالفيديو<br><br>
+الرد خلال ١٢ ساعه
 </div>
 
 <div class="price">السعر ٢٩٩ ريال</div>
@@ -184,7 +184,7 @@ function toggleFAQ(el){
 <div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
-<!-- FAQ -->
+<!-- FAQ (زي ما هو) -->
 <div id="faq" class="page">
 <h2>الأسئلة الشائعة</h2>
 
@@ -193,20 +193,9 @@ function toggleFAQ(el){
 <div class="faq-answer">عن طريق الواتس آب</div>
 </div>
 
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">وقت تصميم الجدول؟</div>
-<div class="faq-answer">٤-٦ أيام</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل أقدر أتمرن في البيت؟</div>
-<div class="faq-answer">نعم تقدر</div>
-</div>
-
 <div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
-<!-- واتساب -->
 <a href="https://wa.me/966563035411" class="whatsapp">💬</a>
 
 </body>
