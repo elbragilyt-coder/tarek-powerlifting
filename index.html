@@ -14,7 +14,6 @@ body{
     scroll-behavior:smooth;
 }
 
-/* Hero */
 .hero{
     height:100vh;
     background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') center/cover no-repeat;
@@ -36,41 +35,38 @@ body{
     text-align:center;
 }
 
-/* Buttons */
 .btn{
     display:block;
     background:#ff3c1f;
     padding:15px;
     margin:15px auto;
-    width:300px;
+    width:320px;
     border-radius:40px;
     color:#fff;
     text-decoration:none;
     font-size:18px;
 }
 
-/* Sections */
 .section{
-    padding:40px 20px;
-    text-align:center;
+    padding:50px 20px;
 }
 
 .box{
     border:2px solid #ff3c1f;
     border-radius:20px;
     padding:20px;
-    line-height:1.9;
+    line-height:2;
     text-align:right;
 }
 
 .price{
     color:#ff3c1f;
     font-size:25px;
+    text-align:center;
     margin-top:20px;
     font-weight:bold;
 }
 
-/* FAQ */
 .faq-item{
     margin:15px 0;
     text-align:right;
@@ -88,7 +84,6 @@ body{
     padding:10px;
 }
 
-/* WhatsApp */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -98,7 +93,6 @@ body{
     border-radius:50%;
     color:#fff;
     text-decoration:none;
-    font-size:20px;
 }
 </style>
 
@@ -113,15 +107,19 @@ function toggleFAQ(el){
 
 <body>
 
-<!-- الصفحة الرئيسية -->
+<!-- Hero -->
 <div class="hero">
 <div class="overlay"></div>
 
 <div class="center">
 <h2>🔥 TAREK POWERLIFTING 🔥</h2>
 
-<a href="#subscribe" class="btn">
+<a href="#power" class="btn">
 Powerlifting - زيادة القوة
+</a>
+
+<a href="#importance" class="btn">
+أهمية Powerlifting
 </a>
 
 <a href="#faq" class="btn">
@@ -131,9 +129,29 @@ Powerlifting - زيادة القوة
 </div>
 </div>
 
-<!-- أهمية -->
-<div class="section">
-<h2>أهمية Powerlifting</h2>
+<!-- الاشتراك -->
+<div id="power" class="section">
+<h2 style="text-align:center;">الاشتراك في Powerlifting</h2>
+
+<div class="box">
+برنامج مخصص لزيادة القوة في السكوات والبنش والديدلفت<br><br>
+
+• جدول تدريب مخصص<br>
+• حساب السعرات والماكروز<br>
+• متابعة مستمرة<br>
+• تحسين التكنيك بالفيديو
+</div>
+
+<div class="price">299 ريال</div>
+
+<div style="text-align:center;">
+<a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
+</div>
+</div>
+
+<!-- الأهمية -->
+<div id="importance" class="section">
+<h2 style="text-align:center;">أهمية Powerlifting</h2>
 
 <div class="box">
 
@@ -146,37 +164,56 @@ Powerlifting - زيادة القوة
 • بيحسن شكل الجسم ويخليه أكثر جاذبية<br>
 • بيرفع مستوى الطاقة والثقة بالنفس<br><br>
 
-👉 لو عايز جسم قوي وشكل جذاب… ده الأساس 🔥
+👉 لو عايز جسم قوي وشكل جذاب… الباور ليفتينج هو الأساس 🔥<br><br>
+
+⸻<br><br>
+
+🏋️‍♂️ هل الباور ليفتينج بيزود العضلات؟<br><br>
+
+✔ نعم، وبشكل قوي جدًا<br><br>
+
+• بيحفز نمو عضلي عالي<br>
+• بيشغل كل الجسم<br>
+• بيبني عضلات كثيفة وصلبة<br><br>
+
+💡 الفرق:<br>
+• كمال الأجسام = شكل<br>
+• الباور ليفتينج = قوة + شكل مع بعض<br><br>
+
+⸻<br><br>
+
+🏋️‍♂️ التمارين الأساسية:<br><br>
+
+1️⃣ Bench Press → بناء صدر قوي وزيادة قوة الدفع<br>
+2️⃣ Deadlift → تقوية الجسم بالكامل وبناء ظهر قوي<br>
+3️⃣ Squat → بناء أرجل قوية وتحسين التوازن<br><br>
+
+⸻<br><br>
+
+🔥 ليه تشتري برنامج Powerlifting؟<br><br>
+
+• خطة مخصصة حسب مستواك<br>
+• نظام زيادة أوزان<br>
+• تحسين التكنيك<br>
+• تقليل الإصابات<br>
+• متابعة مستمرة<br><br>
+
+⸻<br><br>
+
+💥 الخلاصة:<br><br>
+
+👉 قوة حقيقية<br>
+👉 أوزان أعلى<br>
+👉 جسم صلب<br><br>
+
+🔥 ده هو الطريق الصح
 
 </div>
-</div>
-
-<!-- الاشتراك -->
-<div id="subscribe" class="section">
-<h2>الاشتراك في Powerlifting</h2>
-
-<div class="box">
-
-برنامج مخصص لزيادة القوة في السكوات والبنش والديدلفت<br><br>
-
-• جدول تدريب مخصص<br>
-• حساب السعرات والماكروز<br>
-• متابعة وتعديل مستمر<br>
-• تحسين التكنيك بالفيديو<br>
-
-</div>
-
-<div class="price">299 ريال</div>
-
-<a href="https://wa.me/966563035411" class="btn">
-تواصل واتساب
-</a>
-
 </div>
 
 <!-- FAQ -->
 <div id="faq" class="section">
-<h2>الأسئلة الشائعة</h2>
+<h2 style="text-align:center;">الأسئلة الشائعة</h2>
 
 <div class="faq-item">
 <div class="faq-question" onclick="toggleFAQ(this)">آلية التواصل؟</div>
