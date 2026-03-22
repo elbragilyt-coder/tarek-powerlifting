@@ -9,128 +9,155 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #000;
+  background: #111;
   color: white;
   text-align: center;
 }
 
-/* الهيدر */
 header {
-  background: #111;
-  color: #ff3c00;
-  padding: 15px;
+  background: #000;
+  padding: 20px;
   font-size: 20px;
-  font-weight: bold;
-  position: relative;
+  color: red;
 }
 
-.menu {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  font-size: 25px;
-}
-
-/* الصورة الرئيسية */
 .hero {
-  height: 350px;
-  background: url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e') center/cover;
-  position: relative;
+  padding: 40px 20px;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.7);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn {
+  display: block;
+  margin: 15px auto;
+  padding: 15px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 30px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.logo {
-  font-size: 60px;
-  color: #ff3c00;
-  font-weight: bold;
-}
-
-/* النص */
-.section-title {
-  color: #ff3c00;
-  font-size: 22px;
-  margin: 20px 0;
-}
-
-/* الكروت */
-.card {
-  border: 2px solid red;
-  border-radius: 20px;
-  margin: 20px;
+.section {
+  display: none;
   padding: 20px;
 }
 
-/* الأزرار */
-.btn {
-  display: block;
-  background: #ff3c00;
-  color: white;
-  padding: 15px;
-  margin: 15px auto;
-  border-radius: 30px;
-  text-decoration: none;
-  width: 80%;
-  font-size: 16px;
+.card {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
 }
 
-/* زر الواتساب */
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
   background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 16px;
+  margin-top: 20px;
+}
+
+.back {
+  background: gray;
 }
 </style>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-  <div class="menu">☰</div>
-  التدريب مع طارق
+🔥 TAREK POWERLIFTING 🔥
 </header>
 
-<section class="hero">
-  <div class="overlay">
-    <div class="logo">T</div>
+<!-- الصفحة الرئيسية -->
+<div id="home" class="section" style="display:block">
+  <div class="hero">
+    <h2>اختر البرنامج المناسب لك</h2>
+
+    <a href="#" class="btn" onclick="showPage('power')">
+      زيادة القوة - Powerlifting
+    </a>
+
+    <a href="#" class="btn" onclick="showPage('body')">
+      زيادة الكتلة - Bodybuilding
+    </a>
+
+    <a href="#" class="btn" onclick="showPage('about')">
+      عني + الأسئلة الشائعة
+    </a>
   </div>
-</section>
-
-<h2 class="section-title">🔥 اختر الباقة المناسبة ليك 🔥</h2>
-
-<div class="card">
-  <h3>باقة الباورليفتنج والقوة</h3>
-  <p>💪 زيادة القوة ورفع الأوزان</p>
-  <p>✔ جدول مخصص</p>
-  <p>✔ حساب السعرات</p>
-  <p>✔ متابعة يومية</p>
-  <p>💰 السعر: 299 ريال</p>
-  <a href="https://wa.me/966563035411" class="btn">اشترك الآن</a>
 </div>
 
-<div class="card">
-  <h3>باقة البودي بيلدينج</h3>
-  <p>🔥 بناء عضلي + خسارة دهون</p>
-  <p>✔ جدول تدريب</p>
-  <p>✔ نظام غذائي</p>
-  <p>✔ متابعة يومية</p>
-  <p>💰 السعر: 299 ريال</p>
-  <a href="https://wa.me/966563035411" class="btn">اشترك الآن</a>
+<!-- باورليفتنج -->
+<div id="power" class="section">
+  <h2>🔥 باقة القوة 🔥</h2>
+
+  <div class="card">
+    <p>💪 زيادة القوة في السكوات والبنش والديدلفت</p>
+    <p>✔ جدول مخصص</p>
+    <p>✔ متابعة يومية</p>
+    <p>✔ حساب السعرات</p>
+    <p>💰 السعر: 299 ريال</p>
+  </div>
+
+  <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
+  <a class="btn back" onclick="showPage('home')">رجوع</a>
 </div>
 
-<a href="https://wa.me/966563035411" class="whatsapp">💬 واتساب</a>
+<!-- بودي بيلدنج -->
+<div id="body" class="section">
+  <h2>🔥 باقة الكتلة 🔥</h2>
+
+  <div class="card">
+    <p>🔥 بناء عضلي + خسارة دهون</p>
+    <p>✔ نظام غذائي</p>
+    <p>✔ جدول تدريب</p>
+    <p>✔ متابعة مستمرة</p>
+    <p>💰 السعر: 299 ريال</p>
+  </div>
+
+  <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
+  <a class="btn back" onclick="showPage('home')">رجوع</a>
+</div>
+
+<!-- عني + FAQ -->
+<div id="about" class="section">
+  <h2>📌 عني / الأسئلة الشائعة</h2>
+
+  <div class="card" style="text-align:right">
+
+    <p><b>آلية التواصل؟</b><br>عن طريق الواتساب</p>
+
+    <p><b>وقت تصميم الجدول؟</b><br>٤-٦ أيام</p>
+
+    <p><b>هل تدرب بنات؟</b><br>نعم، بدون تصوير</p>
+
+    <p><b>تمرين البيت؟</b><br>تقدر توصل لهدفك</p>
+
+    <p><b>الأدوات المطلوبة؟</b><br>ميزان جسم + ميزان أكل + شريط قياس</p>
+
+    <p><b>مكالمة قبل الاشتراك؟</b><br>لا، التواصل واتساب</p>
+
+    <p><b>تسجيل يومي؟</b><br>10 دقائق أسبوعيًا فقط</p>
+
+    <p><b>الأكل رز ودجاج؟</b><br>لا، أي أكل ضمن السعرات</p>
+
+    <p><b>تضمن النتائج؟</b><br>لا، حسب التزامك</p>
+
+    <p><b>الصور ضرورية؟</b><br>لا</p>
+
+    <p><b>مدة الرد؟</b><br>5-7 أيام</p>
+
+  </div>
+
+  <a class="btn back" onclick="showPage('home')">رجوع</a>
+</div>
 
 </body>
 </html>
