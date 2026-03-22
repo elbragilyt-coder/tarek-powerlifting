@@ -9,15 +9,15 @@
 body {
   font-family: Arial;
   margin: 0;
-  background: #0f172a;
+  background: #000;
   color: white;
   text-align: center;
 }
 
 header {
   padding: 30px;
-  background: #020617;
-  font-size: 28px;
+  background: linear-gradient(90deg, red, black);
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -26,30 +26,30 @@ header {
 }
 
 .card {
-  background: #1e293b;
+  background: #111;
   margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
   max-width: 500px;
   text-align: right;
+  border: 1px solid red;
 }
 
 h2 {
-  color: #38bdf8;
+  color: red;
 }
 
 button {
-  background: #22c55e;
+  background: red;
   border: none;
-  padding: 12px 20px;
+  padding: 12px;
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 form {
-  background: #1e293b;
+  background: #111;
   padding: 20px;
   border-radius: 12px;
   max-width: 400px;
@@ -64,14 +64,24 @@ input, select {
   border-radius: 6px;
   border: none;
 }
-</style>
 
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-Tarek Powerlifting 💪
+🔥 TAREK POWERLIFTING 🔥
 </header>
 
 <div class="section">
@@ -80,73 +90,55 @@ Tarek Powerlifting 💪
 <div class="card">
 <h3>باقة الباورليفتينق والقوة</h3>
 <p>
-تهدف إلى زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت من خلال:
-<br><br>
-- جدول بورلفتنق مخصص لك<br>
-- تمارين مساعدة للرفعات الأساسية<br>
-- استهداف جميع عضلات الجسم<br>
-- حساب السعرات والماكروز<br>
-- تعديل التكنيك بالفيديو<br>
-- متابعة يومية<br>
-- الرد خلال 12-24 ساعة<br><br>
-
-💰 السعر: 299 ريال شهرياً
+زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت 💪<br><br>
+✔ جدول مخصص<br>
+✔ حساب السعرات<br>
+✔ متابعة يومية<br>
+✔ تعديل التكنيك بالفيديو<br><br>
+💰 السعر: 299 ريال
 </p>
-<button onclick="selectPlan('Powerlifting')">اشترك الآن</button>
 </div>
 
 <div class="card">
 <h3>باقة البودي بيلدينق</h3>
 <p>
-تركز على البناء العضلي وخسارة الدهون وتحقيق أفضل شكل ممكن:
-<br><br>
-- جدول تدريب مخصص<br>
-- جدول غذائي كامل<br>
-- حساب السعرات والماكروز<br>
-- تعديل التكنيك بالفيديو<br>
-- متابعة يومية<br>
-- الرد خلال 12-24 ساعة<br><br>
-
+بناء عضلي + خسارة دهون 🔥<br><br>
+✔ جدول تدريب<br>
+✔ نظام غذائي<br>
+✔ متابعة يومية<br>
+✔ تحسين الأداء<br><br>
 💰 السعر: 299 ريال
 </p>
-<button onclick="selectPlan('Bodybuilding')">اشترك الآن</button>
 </div>
+
 </div>
 
 <div class="section">
-<h2>📝 سجل دلوقتي</h2>
+<h2>📝 سجل الآن</h2>
 
 <form>
-<label>الاسم</label>
-<input type="text" required>
+<input type="text" placeholder="اسمك">
+<input type="text" placeholder="رقمك">
 
-<label>رقم الموبايل</label>
-<input type="text" required>
-
-<label>اختر الباقة</label>
-<select id="plan">
-  <option>Powerlifting</option>
-  <option>Bodybuilding</option>
+<select>
+<option>Powerlifting</option>
+<option>Bodybuilding</option>
 </select>
 
-<button type="submit">إرسال</button>
+<button>إرسال</button>
 </form>
 </div>
 
 <div class="section">
 <p>
 لو تايه ومش عارف تبدأ منين…<br>
-البرنامج ده معمول عشان يمشي معاك خطوة بخطوة<br>
-لحد ما توصل لنتيجة حقيقية 💪🔥
+ابدأ معانا خطوة بخطوة لحد ما توصل لأقوى نسخة منك 🔥💪
 </p>
 </div>
 
-<script>
-function selectPlan(plan) {
-  document.getElementById("plan").value = plan;
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-}
-</script>
+<a href="https://wa.me/966XXXXXXXXX" class="whatsapp">
+💬 واتساب
+</a>
 
 </body>
 </html>
