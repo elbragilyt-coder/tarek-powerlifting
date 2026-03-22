@@ -1,175 +1,182 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarek Powerlifting</title>
+<title>TAREK POWERLIFTING</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #000;
-    color: white;
-    text-align: center;
+body {margin:0;font-family:Arial;background:#000;color:white;text-align:center;}
+
+.hero {
+    position:relative;
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e') center/cover;
 }
 
-header {
-    padding: 20px;
-    background: #111;
-    color: #ff3c00;
+.overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
 }
 
-.section {
-    display: none;
-    padding: 30px;
-    animation: fadeIn 0.5s;
+.smoke {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:url('https://i.ibb.co/7vDLJFb/smoke.png');
+    opacity:0.2;
+    animation:smokeMove 20s infinite linear;
 }
 
-.active {
-    display: block;
+@keyframes smokeMove {
+    0%{background-position:0 0;}
+    100%{background-position:1000px 0;}
 }
+
+.logo {
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:50px;
+    color:#ff3c1f;
+}
+
+.text {margin-top:-100px;padding:20px;}
 
 .btn {
-    display: block;
-    background: #ff3c00;
-    padding: 15px;
-    margin: 15px auto;
-    width: 80%;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
+    background:#ff3c1f;
+    padding:15px;
+    margin:10px auto;
+    width:80%;
+    border-radius:30px;
+    cursor:pointer;
+    display:block;
+    color:white;
+    text-decoration:none;
 }
 
-.card {
-    border: 2px solid #ff3c00;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: right;
-    line-height: 1.8;
+.content {
+    display:none;
+    border:1px solid red;
+    margin:20px;
+    padding:20px;
+    border-radius:20px;
+    text-align:right;
 }
 
 .whatsapp {
-    background: #25D366;
-}
-
-.back {
-    margin-top: 20px;
-    cursor: pointer;
-    color: #ff3c00;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
 }
 </style>
-
-<script>
-function showSection(id){
-    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-}
-</script>
-
 </head>
 
 <body>
 
-<header>🔥 TAREK POWERLIFTING 🔥</header>
-
-<!-- الصفحة الرئيسية -->
-<div id="home" class="section active">
-    <h2>اختر الباقة المناسبة لك</h2>
-
-    <div class="btn" onclick="showSection('power')">
-        Powerlifting - زيادة القوة
-    </div>
-
-    <div class="btn" onclick="showSection('body')">
-        BodyBuilding - زيادة الكتلة العضلية
-    </div>
-
-    <div class="btn" onclick="showSection('faq')">
-        الأسئلة الشائعة
-    </div>
+<div class="hero">
+<div class="overlay"></div>
+<div class="smoke"></div>
+<div class="logo">T</div>
 </div>
 
-<!-- باور -->
-<div id="power" class="section">
-    <h2>🔥 باقة الباورليفتنج 🔥</h2>
+<div class="text">
 
-    <div class="card">
-        <p>
-        هي باقة تهدف إلى زيادة القوة ورفع الأوزان في السكوات والبنش والديدلفت من خلال تصميم جدول يخدم هذا الهدف، وجدولة تمارين مساعدة للرفعات الأساسية واستهداف جميع عضلات الجسم وتجهيزها لحمل أعلى أوزان ممكنة.
-        </p>
+<h3>اختر الباقة المناسبة لك</h3>
 
-        <p><strong>📌 الباقة تتضمن:</strong></p>
+<div class="btn" onclick="toggle('power')">Powerlifting - زيادة القوة</div>
 
-        <p>✔ جدول باورليفتنج مخصص لك مع التعديل عند الحاجة</p>
-        <p>✔ حساب السعرات والماكروز مع التعديل عند الحاجة</p>
-        <p>✔ تعديل طريقة أداء التمارين عن طريق الفيديو</p>
-        <p>✔ الرد على جميع الأسئلة خلال 12 ساعة للضروري و24 ساعة لغير الضروري (عدا الخميس والجمعة)</p>
-
-        <p>💰 السعر: 299 ريال</p>
-    </div>
-
-    <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
-
-    <div class="back" onclick="showSection('home')">رجوع</div>
+<div id="power" class="content">
+<h3>باقة الباورلفتينق</h3>
+<p>زيادة القوة في السكوات والبنش والديدلفت</p>
 </div>
 
-<!-- بودي -->
-<div id="body" class="section">
-    <h2>🔥 باقة البودي بيلدنج 🔥</h2>
+<div class="btn" onclick="toggle('body')">Bodybuilding - تحسين الجسم</div>
 
-    <div class="card">
-        <p>
-        البودي بلدنج هي رياضة تركز بشكل أساسي على البناء العضلي وخسارة الدهون واكتساب أكبر كتلة عضلية ممكنة من خلال تصميم جدول يستهدف جميع عضلات الجسم ويركز على نقاط الضعف لتحقيق أفضل شكل ممكن.
-        </p>
-
-        <p><strong>📌 الباقة تتضمن:</strong></p>
-
-        <p>✔ جدول بودي بيلدنج مخصص لك مع التعديل عند الحاجة</p>
-        <p>✔ جدول غذائي مع حساب السعرات والماكروز</p>
-        <p>✔ تعديل التكنيك عن طريق الفيديو</p>
-        <p>✔ الرد على الأسئلة من 1 إلى 6 مساءً (حد أقصى 4 ساعات للضروري و24 ساعة لغير الضروري)</p>
-
-        <p>💰 السعر: 299 ريال</p>
-    </div>
-
-    <a class="btn whatsapp" href="https://wa.me/966563035411">تواصل واتساب</a>
-
-    <div class="back" onclick="showSection('home')">رجوع</div>
+<div id="body" class="content">
+<h3>باقة البودي بلدنج</h3>
+<p>بناء عضلي وخسارة دهون</p>
 </div>
 
-<!-- FAQ -->
-<div id="faq" class="section">
-    <h2>📌 الأسئلة الشائعة</h2>
+<a href="form.html" class="btn">🔥 سجل الآن</a>
 
-    <div class="card">
-
-    <p><strong>وقت تصميم الجدول؟</strong><br>٤-٦ أيام</p>
-
-    <p><strong>هل تدرب بنات؟</strong><br>نعم، بدون تصوير</p>
-
-    <p><strong>تمرين البيت؟</strong><br>تقدر توصل لهدفك</p>
-
-    <p><strong>الأدوات المطلوبة؟</strong><br>ميزان + ميزان أكل + شريط قياس</p>
-
-    <p><strong>تسجيل يومي؟</strong><br>10 دقائق أسبوعيًا</p>
-
-    <p><strong>الأكل لازم ثابت؟</strong><br>لا</p>
-
-    <p><strong>الدفع خارج السعودية؟</strong><br>تحويل أو ماي فاتورة</p>
-
-    <p><strong>تضمن النتائج؟</strong><br>حسب التزامك</p>
-
-    </div>
-
-    <div class="back" onclick="showSection('home')">رجوع</div>
 </div>
+
+<a href="https://wa.me/966563035411" class="whatsapp">💬</a>
+
+<script>
+function toggle(id){
+let el=document.getElementById(id);
+el.style.display=(el.style.display==="block")?"none":"block";
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الاشتراك</title>
+
+<style>
+body{background:#000;color:white;font-family:Arial;text-align:center;}
+
+input,select,textarea{
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:none;
+}
+
+button{
+background:#ff3c1f;
+color:white;
+padding:15px;
+border:none;
+border-radius:30px;
+width:80%;
+}
+</style>
+</head>
+
+<body>
+
+<h2>🔥 تسجيل الاشتراك 🔥</h2>
+
+<form action="https://formsubmit.co/YOUR-EMAIL" method="POST">
+
+<input type="text" name="name" placeholder="اسمك" required>
+<input type="number" name="weight" placeholder="وزنك">
+<input type="number" name="height" placeholder="طولك">
+
+<select name="goal">
+<option>هدفك</option>
+<option>زيادة القوة</option>
+<option>بناء عضل</option>
+<option>خسارة دهون</option>
+</select>
+
+<select name="level">
+<option>مستواك</option>
+<option>مبتدئ</option>
+<option>متوسط</option>
+<option>متقدم</option>
+</select>
+
+<textarea name="notes" placeholder="ملاحظات"></textarea>
+
+<button type="submit">إرسال</button>
+
+</form>
 
 </body>
 </html>
