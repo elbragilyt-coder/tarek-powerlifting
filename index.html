@@ -6,112 +6,103 @@
 <title>Tarek Powerlifting</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #000;
-    color: white;
+body{
+    margin:0;
+    font-family:Arial;
+    background:#000;
+    color:#fff;
+    scroll-behavior:smooth;
 }
 
-.page {
-    display: none;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 20px;
-    text-align: center;
+/* Hero */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') center/cover no-repeat;
+    position:relative;
 }
 
-.hero {
-    background: url('https://images.unsplash.com/photo-1550345332-09e3ac987658') center/cover no-repeat;
-    position: relative;
-}
-
-.overlay {
+.overlay{
     position:absolute;
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.75);
 }
 
-.center {
+.center{
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+    text-align:center;
 }
 
-.btn {
+/* Buttons */
+.btn{
     display:block;
     background:#ff3c1f;
     padding:15px;
     margin:15px auto;
     width:300px;
-    border-radius:30px;
-    cursor:pointer;
-    color:white;
+    border-radius:40px;
+    color:#fff;
     text-decoration:none;
+    font-size:18px;
 }
 
-.box {
+/* Sections */
+.section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.box{
     border:2px solid #ff3c1f;
     border-radius:20px;
     padding:20px;
-    text-align:right;
     line-height:1.9;
+    text-align:right;
 }
 
-.price {
-    margin-top:20px;
-    font-size:22px;
+.price{
     color:#ff3c1f;
+    font-size:25px;
+    margin-top:20px;
     font-weight:bold;
 }
 
-.back {
-    margin-top:20px;
-    background:#ff3c1f;
-    padding:10px 20px;
-    border-radius:20px;
-    display:inline-block;
-    cursor:pointer;
-}
-
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#25D366;
-    padding:15px;
-    border-radius:50%;
-    color:white;
-    text-decoration:none;
-}
-
-.faq-item {
+/* FAQ */
+.faq-item{
     margin:15px 0;
     text-align:right;
 }
 
-.faq-question {
+.faq-question{
     background:#ff3c1f;
     padding:12px;
     border-radius:10px;
     cursor:pointer;
 }
 
-.faq-answer {
+.faq-answer{
     display:none;
-    padding:12px;
-    line-height:1.8;
+    padding:10px;
+}
+
+/* WhatsApp */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
 }
 </style>
 
 <script>
-function openPage(id){
-    document.querySelectorAll('.page').forEach(p=>p.style.display="none");
-    document.getElementById(id).style.display="block";
-}
-
 function toggleFAQ(el){
     let ans = el.nextElementSibling;
     ans.style.display = (ans.style.display==="block")?"none":"block";
@@ -122,71 +113,69 @@ function toggleFAQ(el){
 
 <body>
 
-<!-- الرئيسية -->
-<div id="home" class="page hero" style="display:block;">
+<!-- الصفحة الرئيسية -->
+<div class="hero">
 <div class="overlay"></div>
 
 <div class="center">
 <h2>🔥 TAREK POWERLIFTING 🔥</h2>
 
-<div class="btn" onclick="openPage('power')">
+<a href="#subscribe" class="btn">
 Powerlifting - زيادة القوة
-</div>
+</a>
 
-<div class="btn" onclick="openPage('body')">
-Bodybuilding - تغيير شكل الجسم وزيادة الكتلة العضلية
-</div>
-
-<div class="btn" onclick="openPage('faq')">
+<a href="#faq" class="btn">
 الأسئلة الشائعة
-</div>
+</a>
+
 </div>
 </div>
 
-<!-- POWER -->
-<div id="power" class="page">
-<h2>الباور ليفتينق</h2>
+<!-- أهمية -->
+<div class="section">
+<h2>أهمية Powerlifting</h2>
 
 <div class="box">
-هي باقة تهدف إلى زيادة القوة ورفع الاوزان في السكوات والبنش والديدلفت<br><br>
-من خلال تصميم جدول يخدم هذا الهدف , جدولة تمارين مساعدة للرفعات الاساسية , استهداف جميع عضلات الجسم وتجهيزها لحمل اعلى اوزان ممكنة<br><br>
-: الباقة تتضمن <br><br>
-جدول بورلفتنق مخصص لك مع التعديل عند الحاجة<br><br>
-حساب السعرات و الماكروز مع التعديل عند الحاجة<br><br>
-تعديل طريقة اداء التمارين عن طريق الفيديو<br><br>
-الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه كحد أقصى للرسائل الضرورية و24 ساعة كحد أقصى للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+
+💪 لماذا الباور ليفتينج مهم لكل شخص؟<br><br>
+
+الباور ليفتينج مش مجرد رياضة… هو نظام تدريبي بيبني القوة + الشكل + الثقة بالنفس في نفس الوقت.<br><br>
+
+• لأنه بيخليك أقوى فعليًا مش شكلي بس<br>
+• بيبني جسم صلب ومتناسق<br>
+• بيحسن شكل الجسم ويخليه أكثر جاذبية<br>
+• بيرفع مستوى الطاقة والثقة بالنفس<br><br>
+
+👉 لو عايز جسم قوي وشكل جذاب… ده الأساس 🔥
+
+</div>
 </div>
 
-<div class="price">السعر ٢٩٩ ريال</div>
-
-<a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
-
-<div class="back" onclick="openPage('home')">رجوع</div>
-</div>
-
-<!-- BODY -->
-<div id="body" class="page">
-<h2>البودي بلدنج</h2>
+<!-- الاشتراك -->
+<div id="subscribe" class="section">
+<h2>الاشتراك في Powerlifting</h2>
 
 <div class="box">
-ايش هي رياضة البودي بلدنج ؟ و كيف طريقة تصميم الجداول فيها ؟<br><br>
-البودي بلدنج هي رياضه تركز بشكل اساسي على البناء العضلي وخسارة الدهون واكتساب اكبر كتلة عضلية ممكنة عن طريق تصميم جدول يستهدف جميع عضلات الجسم ويركز على نقاط الضعف لتحقيق التكامل في الشكل الخارجي<br><br>
-الباقة تتضمن <br><br>
-جدول بودي بلدنج مخصص لك مع التعديل عند الحاجة<br><br>
-جدول غذائي مع حساب السعرات و الماكروز<br><br>
-تعديل (التكنيك) عن طريق الفيديو<br><br>
-الرد على جميع الأسئلة والاستفسارات خلال ١٢ ساعه للرسائل الضرورية و24 ساعة للرسائل غير الضرورية والروتينية ما عدا يومي الخميس والجمعة
+
+برنامج مخصص لزيادة القوة في السكوات والبنش والديدلفت<br><br>
+
+• جدول تدريب مخصص<br>
+• حساب السعرات والماكروز<br>
+• متابعة وتعديل مستمر<br>
+• تحسين التكنيك بالفيديو<br>
+
 </div>
 
-<div class="price">السعر ٢٩٩ ريال</div>
+<div class="price">299 ريال</div>
 
-<a href="https://wa.me/966563035411" class="btn">تواصل واتساب</a>
+<a href="https://wa.me/966563035411" class="btn">
+تواصل واتساب
+</a>
 
-<div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
 <!-- FAQ -->
-<div id="faq" class="page">
+<div id="faq" class="section">
 <h2>الأسئلة الشائعة</h2>
 
 <div class="faq-item">
@@ -196,61 +185,19 @@ Bodybuilding - تغيير شكل الجسم وزيادة الكتلة العضل
 
 <div class="faq-item">
 <div class="faq-question" onclick="toggleFAQ(this)">وقت تصميم الجدول؟</div>
-<div class="faq-answer">
-من بعد تعبئة الفورم تصميم الجدول يحتاج ٤-٦ أيام بحيث يتم بناؤه بدقة وتخصيصه لك بأكبر شكل ممكن
-</div>
+<div class="faq-answer">٤-٦ أيام</div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">هل تدرب بنات؟ وإيش هي آلية المتابعة معهم؟</div>
-<div class="faq-answer">
-نعم، أدرب الجنسين، وآلية المتابعة هي نفس آلية المتابعة عند الرجال، واللي بتكون من خلال الوزن والقياسات وتطور الأوزان في النادي ماعدا ان تصوير الجسم بالنسبه للبنات مرفوض
-</div>
+<div class="faq-question" onclick="toggleFAQ(this)">هل تدرب بنات؟</div>
+<div class="faq-answer">نعم، أدرب الجنسين</div>
 </div>
 
 <div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">أقدر أوصل لهدفي من خلال التمرين في البيت؟</div>
-<div class="faq-answer">
-أكيد، تقدر توصل لهدفك وتسوي تحول كبير في جسمك من خلال التمرين في البيت
-</div>
+<div class="faq-question" onclick="toggleFAQ(this)">تضمن النتائج؟</div>
+<div class="faq-answer">تعتمد على التزامك</div>
 </div>
 
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">إيش الأدوات اللي أحتاج أوفرها قبل الاشتراك؟</div>
-<div class="faq-answer">
-ميزان للجسم، ميزان للأكل، شريط للقياس
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">أقدر أدخل معك مكالمة هاتفية قبل الاشتراك؟</div>
-<div class="faq-answer">
-للأسف لا، لأن الخيار هذا غير عملي ويستهلك وقت طويل من الطرفين نقدر نخصصه في بناء الخطة والتطور، ومع فورم الأسئلة ومحادثة الواتس آب الدائمة بيننا بنقدر نعرف كل شي عنك ونشكل الخطة بما يتناسب معك
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">أحتاج أسجل بيانات كثيرة يوميًا؟</div>
-<div class="faq-answer">
-لا، أحتاج منك بس 10 دقائق كل أسبوع تاخذ فيها صور لجسمك لو كنت حاب تصور، وتسجل القياسات وتكتب الملاحظات عن أسبوعك لا أكثر
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">تضمن لي النتائج؟</div>
-<div class="faq-answer">
-للاسف لا ، لانه في عوامل كثيرة تتوقف عليها النتيجة (جيناتك، استجابة جسمك ، ظروف حياتك ، التزامك ، ….. ) لكن اللي اضمنه لك هو انك توصل لافضل نسخة لك اذا التزمت
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(this)">ضروري اخذ صور لجسمي؟</div>
-<div class="faq-answer">
-لا ، مو ضروري اذا تنحرج من هالشي
-</div>
-</div>
-
-<div class="back" onclick="openPage('home')">رجوع</div>
 </div>
 
 <a href="https://wa.me/966563035411" class="whatsapp">💬</a>
